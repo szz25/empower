@@ -1,0 +1,103 @@
+.sel{
+  width: 100%;
+  height: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+radio-group{
+  display: flex;
+  justify-content: space-around;
+}
+.weui-cells_after-title{
+  margin-top: 40rpx;
+}
+.weui-cell{
+  width: 32%;
+  height: 231rpx;
+  border: 2rpx solid #ccc;
+  padding: 0;
+  justify-content: center;
+}
+.img{
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+.weui-cell__ft{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.show{
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  border: 2rpx solid #54ee44;
+}
+.radio{
+  display: flex;
+  align-items: center;
+  font-size: 25rpx;
+}
+.btn{
+  width: 40%;
+  background: #54ee44;
+  color: #fff;
+  margin-top: 40rpx;
+}
+.inp{
+  width: 18%;
+  height: 60rpx;
+  display: flex;
+}
+.lable{
+  width: 18%;
+  position: relative;
+  background: #eee;
+  text-align: center;
+  font-size: 25rpx;
+  line-height: 60rpx;
+}
+.showz{
+  background: rgba(3, 22, 111, 0.2);
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+}
+.text{
+  display: block;
+  width: 100%;
+  margin-top: 40rpx;
+  font-size: 30rpx;
+  color: #ccc;
+  text-align: center;
+}
+.h2{
+  font-size: 25rpx;
+  color: #ccc;
+  margin-top: 20rpx;
+}
+.h1{
+  display: flex;
+  align-items: flex-start;
+  padding-left: 20rpx;
+}
+.place{
+  font-size: 25rpx;
+}
+.yuan{
+  border: 2rpx solid #ccc;
+  height: 100%;
+  display: block;
+  font-size: 25rpx;
+  line-height: 60rpx;
+}
+.insp{
+  width: 100%;
+  height: 100%;
+  border: 2rpx solid #ccc;
+}

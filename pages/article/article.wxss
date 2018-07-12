@@ -1,0 +1,7 @@
+/* pages/article.wxss */
+.artticle-page{
+   padding: 40px
+}
+.weui-flex{
+  margin-top: 50px
+}

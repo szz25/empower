@@ -1,0 +1,22 @@
+<view class='main'>
+  <view class='sel' wx:if="{{bool}}">
+      <image class='img' src='../../images/flower2.png'></image>
+    <text class='h2'>将使用你的{{value}}账号访问 <text style='color:blue;'>长链版权</text> ，并同时登陆{{value}}</text>
+    <view class='inp'>
+      <text>账号</text>
+      <input type='text'/>
+    </view>
+    <view class='inp'>
+      <text>密码</text>
+      <input type='password'/>
+    </view>
+  </view>
+  <view class='success' wx:else>
+    <view>登录成功，将允许 <text style='color:blue;'>长链版权</text> 进行以下操作：</view>
+    <view>获取您的{{value}}文章</view>
+    <view>分享内容到您的{{value}}</view>
+  </view>
+  <button class='btn' bindtap='login' wx:if="{{bool}}">登录</button>
+  <button class='btn' bindtap='lian' wx:else>链接</button>
+  <navigator open-type="navigateBack" delta="1" class='nav'>取消</navigator>
+</view>

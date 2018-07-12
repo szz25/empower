@@ -1,0 +1,9 @@
+<!--pages/preview/preview.wxml-->
+<view class='preview-page'>
+<text class='pre-title'>{{ptitle}}</text>
+<view class='pre-content'>
+{{pcontent}}
+</view>
+</view>
+
+

@@ -1,0 +1,24 @@
+<view class='library'>
+  <text>图片标题</text>
+  <view class='ltitle'>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">2018.07.06</view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">费用：100btc</view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">发布到媒体</view>
+      </view>
+    </view>
+  </view>
+<image class='lcontent' src='../../images/flower2.png'></image>
+<text class='lfooter'>本文经「长链版权」原创认证，作者wujie，访问yuanben.io查询【2IDROBAM】获取授权信息。</text>
+ <view class="icon-box">
+    <view class="icon-box">
+      <icon type="cancel" size="23"></icon> <text class='del'>删除文章</text> 
+    </view>
+  </view>
+ <button class="weui-btn" type="warn" plain="true" bindtap='authDetail'>认证授权详情</button>
+</view>

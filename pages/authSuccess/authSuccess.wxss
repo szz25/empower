@@ -1,0 +1,11 @@
+/* pages/authSuccess/authSuccess.wxss */
+.auths-tit{
+  width: 100%;
+}
+.autns-container{
+ text-align: center;
+
+}
+.page-btn{
+  padding: 40px
+}

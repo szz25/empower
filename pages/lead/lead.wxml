@@ -1,0 +1,28 @@
+<view class='main'>
+  <view class='head'>
+    <view>
+      <text class='quan gao'>1</text>
+      <text>选择媒体</text>
+    </view>
+    <view>
+      <text class='quan'>2</text>
+      <text>选择文章</text>
+    </view>
+    <view>
+      <text class='quan'>3</text>
+      <text>认证授权</text>
+    </view>
+  </view>
+  <text class='tit'>选择发布媒体（可选多个)</text>
+  <checkbox-group bindchange="checkboxChange">
+    <view class='medium' wx:for="{{items}}" wx:key="{{key}}">
+      <label class="checkbox">
+        <checkbox value="{{item.name}}" checked="{{item.bool&&item.checked}}"/>
+        <text class='btn show' wx:if="{{item.bool&&item.checked}}">{{item.value}}</text>
+        <text class='btn' wx:else>{{item.value}}</text>
+      </label>
+      <view wx:if="{{item.bool}}" bindtap='lead'>导入内容</view>
+      <view wx:else data-value="{{item.value}}" bindtap='bind'>马上绑定</view>
+    </view>
+  </checkbox-group>
+</view>

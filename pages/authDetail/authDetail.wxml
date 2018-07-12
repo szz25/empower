@@ -1,0 +1,110 @@
+<!--pages/authDetail/authDetail.wxml-->
+<view class='authdetail'>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">作品名称：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">weui</view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">作者：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">ff</view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">作品：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder dimg">
+        <image src='../../images/flower2.png'></image>
+      </view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">发布时间：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">ff</view>
+    </view>
+
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">作品DNA：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">ff</view>
+    </view>
+
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">授权协议：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">ff</view>
+    </view>
+
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">授权说明：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">ff</view>
+    </view>
+
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">区块链地址：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">ff</view>
+    </view>
+
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">内容hash：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">WJ5N27WC60VV4N9XX22QUDNV43S89
+F4AHJV9XZU00PC8KLVEF</view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">签名字符串：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">WJ5N27WC60VV4N9XX22QUDNV43S89
+F4AHJV9XZU00PC8KLVEF</view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">数字签名：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">fWJ5N27WC60VV4N9XX22QUDNV43S89
+F4AHJV9XZU00PC8KLVEFf</view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view>
+      <view class="placeholder placeholder-tit">签名公钥：</view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder placeholder-con">-----BEGIN PUBLIC KEY----- MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A MIIBCgKCAQEA5E67PKOonX8SoN6f1yJN -----END PUBLIC KEY-----
+      </view>
+    </view>
+  </view>
+</view>

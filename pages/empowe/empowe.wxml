@@ -1,0 +1,67 @@
+<scroll-view scroll-y class='sel'>
+  <view>
+    <text class='h1'>1.选择转载许可协议</text>
+    <view class="weui-cells_after-title">
+      <radio-group bindchange="radioChange">
+        <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+          <view class='show' wx:if="{{item.checked}}">
+          </view>
+            <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+            <view class="">
+                <image class='img' src='{{item.name}}'></image>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+              <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+            </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class='weui-cells_after-title'>
+    <text class='h1'>2.是否允许您的作品被改编</text>
+    <view class='weui-cells_after-title'>
+      <radio-group class="radio-group" bindchange="radioChange2">
+        <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+        </label>
+        <label class="radio" wx:if="{{bool}}">
+            <radio value="3" checked="{{item.checked}}"/>是，只要他人以相同方式共享
+        </label>
+    </radio-group>
+    </view>
+  </view>
+  <view class='weui-cells_after-title' wx:if="{{bool}}">
+    <text class='h1'>3. 是否允许商业使用</text>
+    <view class='weui-cells_after-title'>
+      <radio-group class="radio-group" bindchange="radioChange4">
+        <label class="radio" wx:for="{{item}}" wx:key="{{index}}">
+            <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
+        </label>
+    </radio-group>
+    </view>
+  </view>
+  <view class='weui-cells_after-title' wx:else>
+    <text class='h1'>3. 设置转载价格</text>
+    <view class="weui-cells_after-title">
+      <radio-group bindchange="radioChange3">
+        <label class="lable" wx:for="{{price}}" wx:key="value">
+          <view class='showz' wx:if="{{item.checked}}"></view>
+          <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+          <view class="">
+              {{item.name}}
+          </view>
+        </label>
+        <view class='inp'>
+          <input type='digit' placeholder-class="place" class='insp' placeholder="自定义金额"/><text class='yuan'>元</text>
+        </view>
+      </radio-group>
+    </view>
+  </view>
+  <button class='btn' bindtap='ok'>确定</button>
+  <text class='text'>----您选择的转载许可协议----</text>
+  <view wx:if="{{!bool}}">授权费用￥{{num}}</view>
+  <view class='h2'>
+    <view>{{array.title}}</view>
+    <view class='h1' wx:for="{{array.item}}" wx:key="{{index}}"><text style='margin-right:10rpx;'>■</text>{{item}}</view>
+  </view>
+</scroll-view>

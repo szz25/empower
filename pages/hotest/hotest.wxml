@@ -1,0 +1,100 @@
+<!--hotest.wxml-->
+<view class="container" style='background:#eee;'>
+  <view class='head'>
+    <view class="weui-panel__bd">
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../images/flower2.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">
+            账户名
+            <view class='image'>
+              <image class="img" src="../../images/flower2.png"/>
+              <text>已认证</text>
+            </view>
+            </view>
+            <view class="weui-media-box__desc">简介</view>
+          </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='main'>
+    <view class="weui-tab">
+      <view class="weui-navbar" style='z-index:999;background:#fff;'>
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <scroll-view scroll-y class='wen'>  
+            <view class='one' bindtap='wen'>
+              <text class='tit'>缺钱时，你就懂了这些独食难肥加分不少地方建设的</text>
+              <text class='duo'>氨基酸等哈就开始到拉萨阿里山的骄傲了圣诞节安达阿卡酒店内垃圾收到拉萨安徽是看到八十多俩老师的比较阿里斯顿鞍山道具卡不好解决啊是的咯</text>
+              <view class='content'>
+                <text class='h2'>DNA</text>
+                <text class='h2'>89dhaEnhZl</text>
+                <text class='h2'>2018.06.24</text>
+                <text>授权费用：300btc</text>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='scr'>
+            <view class='tu' bindtap='tu'>
+              <image class='textImg' src="../../images/flower2.png"></image>
+              <text>作品名</text>
+              <view>
+                <image class='textXiao' src="../../images/flower2.png"></image>
+                <text>授权费用:20btc</text>
+              </view>
+            </view>
+            <view class='tu'>
+              <image class='textImg' src="../../images/flower2.png"></image>
+              <text>作品名</text>
+              <view>
+                <image class='textXiao' src="../../images/flower2.png"></image>
+                <text>授权费用:20btc</text>
+              </view>
+            </view>
+            <view class='tu'>
+              <image class='textImg' src="../../images/flower2.png"></image>
+              <text>作品名</text>
+              <view>
+                <image class='textXiao' src="../../images/flower2.png"></image>
+                <text>授权费用:20btc</text>
+              </view>
+            </view>
+            <view class='tu'>
+              <image class='textImg' src="../../images/flower2.png"></image>
+              <text>作品名</text>
+              <view>
+                <image class='textXiao' src="../../images/flower2.png"></image>
+                <text>授权费用:20btc</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <scroll-view scroll-y class='wen'>  
+            <view class='one'>
+              <text class='tit'>缺钱时，你就懂了这些独食难肥加分不少地方建设的</text>
+              <text class='duo'>氨基酸等哈就开始到拉萨阿里山的骄傲了圣诞节安达阿卡酒店内垃圾收到拉萨安徽是看到八十多俩老师的比较阿里斯顿鞍山道具卡不好解决啊是的咯</text>
+              <view class='content'>
+                <text class='h2'>DNA</text>
+                <text class='h2'>89dhaEnhZl</text>
+                <text class='h2'>2018.06.24</text>
+                <text>授权费用：300btc</text>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

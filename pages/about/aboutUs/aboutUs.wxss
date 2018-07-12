@@ -1,0 +1,10 @@
+/* pages/about/aboutUs/aboutUs.wxss */
+.aboutUspage{
+  padding: 30px;
+}
+.aboutUs-tit{
+  text-align: center
+}
+.aboutUs-txt{
+  font-size: 14px;
+}

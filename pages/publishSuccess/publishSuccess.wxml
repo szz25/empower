@@ -1,0 +1,6 @@
+<view class='sel'>
+  <view>已成功发布到</view>
+  <view>{{num}}</view>
+  <text wx:for="{{arr}}" wx:key="{{index}}">{{item}},</text>
+  <navigator url='../latest/latest' open-type="reLaunch" class='btn'>认证授权其他作品</navigator>
+</view>

@@ -1,0 +1,8 @@
+/* pages/about/question/question.wxss */
+.question{
+  padding: 30px
+}
+.q-content{
+  font-size: 14px;
+  color: #999;
+}

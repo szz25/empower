@@ -1,0 +1,21 @@
+.memberimg-con{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+
+}
+.member_inner{
+  height: 900rpx;
+  width: 90%;
+  margin: 0 auto;
+}
+.member{
+  height: 100%;
+  /* height: 400rpx; */
+  
+}
+.footer{
+  padding: 30px;
+}

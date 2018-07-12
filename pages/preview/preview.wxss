@@ -1,0 +1,17 @@
+/* pages/preview/preview.wxss */
+.preview-page{
+  padding: 30px;
+  text-align:center;
+
+}
+.pre-title{
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center
+  
+}
+.pre-content{
+  font-size: 14px;
+  color: #999;
+  padding-top: 20px
+}

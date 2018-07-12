@@ -1,0 +1,21 @@
+/* pages/auth/auth.wxss */
+.authpage{
+  padding-top: 30px
+}
+.placeholder{
+margin-left: 58px
+}
+.placeholder-btn{
+  width: 180px;
+}
+.idcard{
+padding-top: 20px;
+}
+.placeholder-cont{
+ margin:34px auto;
+
+}
+.placeholder-txt{
+  margin-left: 20px;
+  padding: 10px
+}

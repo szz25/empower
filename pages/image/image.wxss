@@ -1,0 +1,11 @@
+/* pages/image.wxss */
+.imgage-con{
+  padding: 40px;
+}
+.phone-img{
+  width: 100%;
+  height: 300px
+}
+.btn-phone{
+  margin-top: 30px
+}

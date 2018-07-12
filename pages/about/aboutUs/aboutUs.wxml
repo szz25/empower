@@ -1,0 +1,12 @@
+<!--pages/about/aboutUs/aboutUs.wxml-->
+
+<view class='aboutUspage'>
+<view class='aboutUs-tit'>标题</view>
+<text class='aboutUs-txt'>
+授权协议是创作者对作品的授权和转载方式的声明，由作者在认证的过程中通过选择或自定义产生。
+授权协议是组成原本DNA的必要内容。转载者需按照创作者的协议要求进行转载。
+【原本】支持免费的知识共享许可协议以及付费的商业许可协议两种方式。
+1.知识共享许可协议（即Creative Commons，简称CC）。是一个非营利组织，也是一种创作的授权方式。知识共享组织设计的这一套协议，意在保留作者相关版权权利的前提下，转载者满足特定转载条件的情况下，自由地复制和传播原创作品。原创用户可以灵活选择作品是否允许被修改、被商用，转载者可以免费获得转载权。了解更多：https://creativecommons.org/licenses/by-nc-nd/2.5/cn/legalcode
+2.商业许可协议。使用商业许可协议，作者将决定是否允许自己的作品被改编以及设置作品单次授权转载的价格。
+</text>
+</view>

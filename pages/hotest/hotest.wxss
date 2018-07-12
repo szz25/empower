@@ -1,0 +1,97 @@
+.head{
+  width: 100%;
+  background: #fff;
+  border-top: 2rpx solid #ccc;
+}
+.weui-media-box__hd image{
+  border-radius: 50%;
+}
+.weui-media-box__title{
+  display: flex;
+}
+.img{
+  width: 100rpx;
+  height: 50rpx;
+  display: inline;
+}
+.image{
+  display: flex;
+  font-size: 20rpx;
+  align-items: flex-end;
+  margin-left: 20rpx;
+}
+.main{
+  width: 100%;
+  margin-top: 20rpx;
+  background: #fff;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.title{
+  padding: 40rpx 40rpx;
+  box-sizing: border-box;
+  display: block;
+  border-bottom: 2rpx solid #ccc;
+}
+.wen{
+  height: 100%;
+  width: 100%;
+}
+.one{
+  width: 100%;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+  box-sizing: border-box;
+}
+.content{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20rpx;
+}
+.tit{
+  font-weight: bold;
+  display: block;
+  width: 60%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.duo{
+  font-size: 30rpx;
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 3; 
+  overflow: hidden; 
+}
+.h2{
+  color: #ccc;
+}
+.weui-tab .scr{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+.tu{
+  width: 45%;
+  border: 2rpx solid #ccc;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+.textImg{
+  width: 100%;
+  height: 200rpx;
+}
+.textXiao{
+  width: 30rpx;
+  height: 30rpx;
+}
+.tu view{
+  display: flex;
+  font-size: 20rpx;
+}

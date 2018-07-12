@@ -1,0 +1,8 @@
+/* pages/about/idea/idea.wxss */
+.idea{
+  padding: 30px
+}
+.q-idea{
+  font-size: 14px;
+  color: #999;
+}

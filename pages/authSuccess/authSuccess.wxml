@@ -1,0 +1,11 @@
+<!--node.wxml-->
+<view class="autns-container">
+  <text class='auths-tit'>
+ 身份认证成功，请进行身份认证吧
+ </text>
+  <view class="page-btn">
+    <button class="weui-btn" type="primary" plain="true" bindtap="article">文章</button>
+    <button class="weui-btn" type="primary" plain="true" bindtap="images">图片</button>
+    <button class="weui-btn" type="primary" plain="true" bindtap="nextStep">导入</button>
+  </view>
+</view>

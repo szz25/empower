@@ -1,0 +1,41 @@
+<view class='main'>
+  <view class='head'>
+    <view>
+      <text class='quan'>1</text>
+      <text>选择媒体</text>
+    </view>
+    <view>
+      <text class='quan gao'>2</text>
+      <text>选择文章</text>
+    </view>
+    <view>
+      <text class='quan'>3</text>
+      <text>认证授权</text>
+    </view>
+  </view>
+  <view class='user'>
+    <view class="weui-panel__bd">
+      <navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+          <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+            <image class="weui-media-box__thumb" src="../../images/flower2.png" />
+          </view>
+          <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+            <view class="weui-media-box__title">账户名</view>
+            <view class="weui-media-box__desc">简介</view>
+          </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='essay'>
+    <text class='title'>文章（20）</text>
+    <scroll-view scroll-y class='wen'>  
+      <view class='one'>
+        <text class='tit'>缺钱时，你就懂了这些独食难肥加分不少地方建设的</text>
+        <view class='content'>
+          <text>2018.06.24</text>
+          <navigator url='../empowe/empowe'>认证授权-></navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* pages/authImg/authImg.wxss */
+.authImg-content{
+  padding: 30px;
+}
+.img-box{
+  width: 100%
+}
+.next-btn{
+  margin:30px auto;
+
+  text-align: center
+}

@@ -1,0 +1,69 @@
+<view class='success'>
+  <view class='main'>
+    <view class='head h2'>
+      <text class='h1'>长链版权DNA </text>
+      <text class='h1'>hfahgiupaherighawryuie</text>
+      区块链地址 0cdsfsdk12865hfuwyrwy4345346c12123x
+    </view>
+    <view class='content'>
+      <view>
+        <text class='h4'>作品名</text>
+        <text class='h3'>飞鸟和鱼</text>
+      </view>
+      <view>
+        <text class='h4'>作者</text>
+        <text class='h3'>江莱</text>
+      </view>
+      <view class='img'>
+        <text class='h4'>作品</text>
+        <image src='../../images/flower2.png'></image>
+      </view>
+      <view>
+        <text class='h4'>发布时间</text>
+        <text class='h3'>2018.06.26</text>
+      </view>
+      <view>
+        <text class='h4'>作品DNA</text>
+        <text class='h3'>3678AK4X</text>
+      </view>
+      <view>
+        <text class='h4'>授权协议</text>
+        <text class='h3'>飞鸟和鱼</text>
+      </view>
+      <view>
+        <text class='h4'>授权说明</text>
+        <text class='h3'>允许复制、发行、展览和表演作品，但必须按照指定的方式对作品进行署名</text>
+      </view>
+      <view>
+        <text class='h4'>区块链地址</text>
+        <text class='h3'>0cdsfsdk12865hfuwyrwy4345346c12123x</text>
+      </view>
+      <button class='btn' bindtap='more' wx:if="{{!bool}}">查看更多</button>
+      <view wx:if="{{bool}}">
+        <text class='h4'>内容hash</text>
+        <text class='h3'>0cdsfsdk12865hfuwyrwy4345346c12123x</text>
+      </view>
+      <view wx:if="{{bool}}">
+        <text class='h4'>签名字符串</text>
+        <text class='h3'>0cdsfsdk12865hfuwyrwy4345346c12123x</text>
+      </view>
+      <view wx:if="{{bool}}">
+        <text class='h4'>数字签名</text>
+        <text class='h3'>0cdsfsdk12865hfuwyrwy4345346c12123x</text>
+      </view>
+      <view wx:if="{{bool}}">
+        <text class='h4'>签名公钥</text>
+        <text class='h3'>-----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+          MIIBCgKCAQEA5E67PKOonX8SoN6f1yJN
+          -----END PUBLIC KEY-----
+        </text>
+      </view>
+    </view>
+  </view>
+  <view class='foot'>
+    <view bindtap='continue'>继续认证</view>
+    <view bindtap='synchronization'>一键同步</view>
+    <view>我的文库</view>
+  </view>
+</view>

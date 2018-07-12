@@ -1,0 +1,25 @@
+/* pages/authDetail/authDetail.wxss */
+.authdetail{
+  margin: 30px;
+  overflow:hidden;
+
+}
+.dimg{
+  width: 100%;
+  height: 80px
+}
+.dimg image{
+  width: 100%;
+  height: 100%
+}
+.placeholder-con{
+  font-size: 14px;
+  color: #666
+}
+.placeholder-tit{
+  width:120px;
+
+}
+.placeholder{
+  margin: 5px 0;
+}

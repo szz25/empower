@@ -1,0 +1,26 @@
+<!--latest.wxml-->
+
+<view class='memberimg-con'>
+<view  class="member_inner">
+  <image class="member" src="../../images/auth.jpg" background-size="cover"></image>
+</view>
+  <view class='footer'>
+    <view class="weui-flex">
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <button class="weui-btn mini-btn" type="primary"  plain="true" bindtap="openConfirm">文章</button>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <button class="weui-btn mini-btn" type="primary"  plain="true" bindtap='images'>图片</button>
+        </view>
+      </view>
+      <view class="weui-flex__item">
+        <view class="placeholder">
+          <button class="weui-btn mini-btn" type="primary"  plain="true" bindtap='lead'>导入</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

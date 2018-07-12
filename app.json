@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/latest/latest",
+    "pages/hotest/hotest",
+    "pages/wenArticle/wenArticle",
+    "pages/librarys/library",
+    "pages/authSuccess/authSuccess",
+    "pages/empowe/empowe",
+    "pages/article/article",
+    "pages/auth/auth",
+    "pages/phone/detail",
+    "pages/about/about",
+    "pages/preview/preview",
+    "pages/image/image",
+    "pages/authImg/authImg",
+    "pages/authDetail/authDetail",
+    "pages/about/aboutUs/aboutUs",
+    "pages/about/idea/idea",
+    "pages/success/success",
+    "pages/select/select",
+    "pages/bindMedium/bindMedium",
+    "pages/publishSuccess/publishSuccess",
+    "pages/lead/lead",
+    "pages/about/question/question",
+    "pages/leadw/leadw"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "长链版权",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#56abe4",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/latest/latest",
+        "text": "认证",
+        "iconPath": "images/latest.png",
+        "selectedIconPath": "images/lastest_on.png"
+      },
+      {
+        "pagePath": "pages/hotest/hotest",
+        "text": "文库",
+        "iconPath": "images/hotest.png",
+        "selectedIconPath": "images/hotest_on.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "images/node.png",
+        "selectedIconPath": "images/node_on.png"
+      }
+    ]
+  },
+  "debug": true
+}

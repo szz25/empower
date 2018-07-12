@@ -1,0 +1,72 @@
+/* pages/success/success.wxss */
+.success{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  overflow-y: scroll;  
+}
+.head{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ccc;
+  padding: 60rpx 0;
+  box-sizing: border-box;
+}
+.h1{
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.h2{
+  font-size: 25rpx;
+}
+.foot{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  justify-content: space-between;
+  border-top: 2rpx solid #ccc;
+}
+.foot view{
+  flex: 1;
+  line-height: 120rpx;
+  text-align: center;
+  border-right: 2rpx solid #ccc;
+}
+.content{
+  padding: 20rpx 20rpx;
+}
+.content view{
+  display: flex;
+}
+.h4{
+  width: 30%;
+}
+.h3{
+  width: 70%;
+  font-size: 30rpx;
+  color: #ccc;
+  word-break: break-all;
+}
+.img{
+  flex-direction: column;
+}
+.img image{
+  margin: 20rpx 0;
+  width: 548rpx;
+  height: 300rpx;
+  margin-left: 127rpx;
+}
+.btn{
+  width: 50%;
+  margin-top: 30rpx;
+  background: #fff;
+}

@@ -1,0 +1,81 @@
+<!--pages/auth/auth.wxml-->
+<!--pages/phone/detail.wxml-->
+<view class='authpage'>
+
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">姓名</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入姓名" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">身份证号</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入身份证号" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="weui-cell__hd">
+      <view class="weui-label">邮箱</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入邮箱" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+
+  </view>
+  <view class="weui-flex idcard">
+    <view class="weui-flex__item">
+      <view class="placeholder">
+        <view class="weui-uploader__bd">
+          
+          <view class="weui-uploader__files" id="uploaderFiles">
+            <block wx:for="{{files}}" wx:key="*this">
+              <view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+                <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+              </view>
+            </block>
+
+            <view class="weui-uploader__input-box">
+              <view class="weui-uploader__input" bindtap="chooseImage"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder">
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="weui-flex">
+    <view class="weui-flex__item">
+      <view class="placeholder-txt">
+        上传身份证正面
+      </view>
+    </view>
+    <view class="weui-flex__item">
+      <view class="placeholder-txt">
+        上传身份证正面
+      </view>
+    </view>
+  </view>
+
+
+  <view class="weui-cell weui-cell_input weui-cell_vcode">
+    <view class="placeholder-cont">
+      <view class="placeholder-btn">
+        <button class="weui-btn mini-btn" type="primary" bindtap="sure">确定</button>
+      </view>
+    </view>
+
+  </view>
+</view>
