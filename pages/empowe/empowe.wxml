@@ -25,7 +25,7 @@
             <radio value="{{item.value}}" checked="{{item.checked}}"/>{{item.name}}
         </label>
         <label class="radio" wx:if="{{bool}}">
-            <radio value="3" checked="{{item.checked}}"/>是，只要他人以相同方式共享
+            <radio value="3"/>是，只要他人以相同方式共享
         </label>
     </radio-group>
     </view>

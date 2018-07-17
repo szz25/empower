@@ -1,0 +1,7 @@
+.weui-cell{
+  width: auto;
+}
+.check{
+  display: flex;
+  flex-wrap: wrap;
+}

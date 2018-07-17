@@ -8,7 +8,7 @@
     <view class='content'>
       <view>
         <text class='h4'>作品名</text>
-        <text class='h3'>飞鸟和鱼</text>
+        <text class='h3'>{{data.title}}</text>
       </view>
       <view>
         <text class='h4'>作者</text>
@@ -16,11 +16,12 @@
       </view>
       <view class='img'>
         <text class='h4'>作品</text>
-        <image src='../../images/flower2.png'></image>
+        <view style='font-size:30rpx;'>{{data.content}}</view>
+        <!-- <image src='{{data.content}}'></image> -->
       </view>
       <view>
         <text class='h4'>发布时间</text>
-        <text class='h3'>2018.06.26</text>
+        <text class='h3'>{{time}}</text>
       </view>
       <view>
         <text class='h4'>作品DNA</text>
@@ -64,6 +65,6 @@
   <view class='foot'>
     <view bindtap='continue'>继续认证</view>
     <view bindtap='synchronization'>一键同步</view>
-    <view>我的文库</view>
+    <view bindtap='library'>我的文库</view>
   </view>
 </view>

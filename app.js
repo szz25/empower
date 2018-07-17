@@ -25,6 +25,7 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    url:'http://47.99.39.62:8080/'
   }
 })

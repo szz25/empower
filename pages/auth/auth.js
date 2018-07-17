@@ -1,11 +1,40 @@
 // pages/auth/auth.js
-Page({
+var app = getApp();
 
-  /**
-   * 页面的初始数据
-   */
+function imageUrl(url){
+  wx.request({
+    url: app.globalData.url + 'utils/img/upload',
+    method: "POST",
+    header: {
+      'content-type': 'multipart/form-data'
+    },
+    data: {
+      file: url
+    },
+    success: (res) => {
+      return res.data.data
+    }
+  })
+}
+Page({
   data: {
-    files: []
+    files: [],
+    image1:'',
+    image2:'',
+    name:'',
+    postbox:"",
+    idNum:'',
+    sessionId:''
+  },
+  onLoad:function(){
+    wx.getStorage({
+      key: 'sessionId',
+      success: (res)=>{ 
+        this.setData({
+          sessionId:res.data
+        })
+      }
+    })
   },
   chooseImage: function (e) {
     var that = this;
@@ -70,66 +99,52 @@ Page({
       urls: this.data.files // 需要预览的图片http链接列表
     })
   },
-
   sure: function(e) {
     var url = '../authSuccess/authSuccess';
-    wx.navigateTo({
-      url: url
+    this.setData({
+      image1: '/upload/76b8ea761af28b4e08d23e9e0679cf87.png'
+    })
+    this.setData({
+      image2: '/upload/76b8ea761af28b4e08d23e9e0679cf87.png'
+    })
+    wx.request({
+      url: app.globalData.url+'authentication',
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data:{
+        name:this.data.name,
+        number: this.data.idNum,
+        picFront: this.data.image1,
+        picBack: this.data.image2,
+        sessionId: this.data.sessionId
+      },
+      success:function(res){
+        if(res.data.success){
+          wx.navigateTo({
+            url: url
+          })
+        }
+      }
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  //获取姓名
+  getName: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  //获取身份证号
+  getIdNum: function (e) {
+    this.setData({
+      idNum: e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  //获取邮箱
+  getPostbox: function (e) {
+    this.setData({
+      postbox: e.detail.value
+    })
   }
 })

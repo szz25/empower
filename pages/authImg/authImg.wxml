@@ -1,5 +1,6 @@
 <!--pages/authImg/authImg.wxml-->
 <view class='authImg-content'>
+<button bindtap='takeGellay'>重选</button>
   <view class='img-box'>
     <image src="{{authImg}}"></image>
   </view>
@@ -8,15 +9,12 @@
       <view class="weui-label">作品名称</view>
     </view>
     <view class="weui-cell__bd">
-      <input class="weui-input" placeholder="请输入作品名称" />
+      <input class="weui-input" placeholder="请输入作品名称" name="{{value}}" bindinput='inp'/>
     </view>
   </view>
-<view class="weui-cell weui-cell_input weui-cell_vcode" >
-<view class='next-btn' >
-      <button class="weui-btn " type="primary" plain="true" bindtap=''>下一步</button>
-
-</view>
-     
+  <view class="weui-cell weui-cell_input weui-cell_vcode" >
+    <view class='next-btn' >
+      <button class="weui-btn " type="primary" plain="true" bindtap='next'>下一步</button>
+    </view>
   </view>
-  
 </view>

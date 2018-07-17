@@ -1,8 +1,11 @@
 /* pages/about/question/question.wxss */
 .question{
-  padding: 30px
+  padding: 30px;
 }
 .q-content{
   font-size: 14px;
   color: #999;
+}
+.questions{
+  font-weight: bold;
 }

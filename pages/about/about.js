@@ -1,6 +1,3 @@
-// topicList.js
-var Api = require('../../utils/api.js');
-
 Page({
   data: {
     // hidden: false

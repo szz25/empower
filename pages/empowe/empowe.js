@@ -1,17 +1,18 @@
 // pages/empowe/empowe.js
+var app = getApp();
 Page({
   data: {
     radioItems: [
-      { name: '../../images/hotest.png', value: '0', checked: true },
-      { name: '../../images/hotest.png', value: '1'}
+      { name: '../../images/hotest.png', value: '0', checked: true, license:'KnowledgeSharing' },
+      { name: '../../images/hotest.png', value: '1', license:'business'}
     ],
     items: [
       { value: '1', name: '是', checked: 'true' },
       { value: '2', name: '否' }
     ],
     item: [
-      { value: '1', name: '是', checked: 'true' },
-      { value: '2', name: '否' }
+      { value: '1', name: '是', checked: 'true', business:true },
+      { value: '2', name: '否', business: false }
     ],
     price: [
       { name: '10元', value: '10', checked: 'true' },
@@ -25,24 +26,47 @@ Page({
     ],
       title: "本作品采用 知识共享署名4.0 国际许可协议 进行许可。"
     },
-    num:'10'
+    num:'10',
+    lable:'',
+    title:'',
+    content:'',
+    sessionId:''
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      lable: options.lable
+    })
+    wx.getStorage({
+      key: 'title',
+      success: (res) => {
+        this.setData({
+          title:res.data
+        })
+      }
+    })
+    wx.getStorage({
+      key: 'content',
+      success: (res) => {
+        this.setData({
+          content: res.data
+        })
+      }
+    })
+    wx.getStorage({
+      key: 'sessionId',
+      success: (res) => {
+        this.setData({
+          sessionId: res.data
+        })
+      }
+    })
   },
   radioChange: function (e) {
-    var radioItems = this.data.radioItems;
-    for (var i = 0, len = radioItems.length; i < len; ++i) {
-      radioItems[i].checked = radioItems[i].value == e.detail.value;
-      this.setData({
-        bool: !radioItems[i].checked
-      })
-    }
     this.setData({
-      radioItems: radioItems
+      radioItems: gai(this.data.radioItems, this,e)
     });
     if (e.detail.value == '0') {
       this.setData({
@@ -63,6 +87,9 @@ Page({
     }
   },
   radioChange2: function (e) {
+    this.setData({
+      items: gai(this.data.items, this,e)
+    });
     this.data.radioItems.map((v)=>{
       if(v.checked){
         if(v.value=='0'){
@@ -149,16 +176,15 @@ Page({
     })
   },
   radioChange3: function (e) {
-    var radioItems = this.data.price;
-    for (var i = 0, len = radioItems.length; i < len; ++i) {
-      radioItems[i].checked = radioItems[i].value == e.detail.value;
-    }
     this.setData({
-      price: radioItems,
+      price: gai(this.data.price, this,e),
       num: e.detail.value
     });
   },
   radioChange4: function (e) {
+    this.setData({
+      item: gai(this.data.item, this,e),
+    });
     this.data.radioItems.map((v) => {
       if (v.checked) {
         if (v.value == '0') {
@@ -226,8 +252,79 @@ Page({
     })
   },
   ok:function(e){
-    wx.navigateTo({
-      url: '../success/success',
+    let agreement={};
+    let that = this;
+    this.data.radioItems.map((v)=>{
+      if(v.checked){
+        if(v.value == 0){
+          agreement.license = v.license
+          that.data.items.map((v) => {
+            if (v.checked) {
+              agreement.modify = parseInt(v.value);
+            }
+            agreement.modify = 3
+          })
+          that.data.item.map((v)=>{
+            if(v.checked){
+              agreement.business = v.business
+            }
+          })
+        }else{
+          agreement.license = v.license
+          that.data.items.map((v) => {
+            if (v.checked) {
+              agreement.modify = parseInt(v.value)
+            }
+          })
+          that.data.price.map((v)=>{
+            if(v.checked){
+              agreement.price = parseInt(v.value)
+            }
+          })
+        }
+      }
+    })
+    console.log(agreement)
+    wx.request({
+      url: app.globalData.url + 'prove',
+      method: "POST",
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      data: {
+        tid: 2,
+        agreement: JSON.stringify(agreement),
+        label: that.data.lable,
+        title: that.data.title,
+        content:that.data.content,
+        sessionId: that.data.sessionId
+      },
+      success:function(res){
+        console.log(res)
+        if(res.data.success){
+          wx.navigateTo({
+            url: '../success/success?data='+JSON.stringify(res.data.data),
+          })
+        }else{
+          wx.showToast({
+            title: '失败',
+            icon: 'loading',
+            duration: 1500
+          })
+        }
+      }
     })
   }
 })
+function gai(val,that,e){
+  var radioItems = val;
+  for (var i = 0, len = radioItems.length; i < len; ++i) {
+    radioItems[i].checked = radioItems[i].value == e.detail.value;
+    if (radioItems[i].license){
+      that.setData({
+        bool: !radioItems[i].checked
+      })
+    }
+  }
+  return radioItems
+}

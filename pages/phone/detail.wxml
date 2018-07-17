@@ -27,7 +27,7 @@
     <view class="weui-cell__bd">
       <input class="weui-input" name='code' bindinput='userCodeInput' placeholder="请输入验证码" />
     </view>
-    <view class="weui-cell__ft">
+    <view class="weui-cell__ft" bindtap='code'>
       <view class="weui-vcode-btn">获取验证码</view>
     </view>
   </view>

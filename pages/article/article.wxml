@@ -25,7 +25,7 @@
   <view class="weui-flex">
     <view class="weui-flex__item">
       <view class="placeholder-btn">
-        <button class="weui-btn mini-btn" type="primary" >存草稿</button>
+        <button class="weui-btn mini-btn" type="primary" bindtap='deposit'>存草稿</button>
       </view>
     </view>
     <view class="weui-flex__item">
